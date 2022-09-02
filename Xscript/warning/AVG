@@ -1,0 +1,17 @@
+input: shortlength(20); setinputname(1,"短期均線期數");
+input: midlength(100); setinputname(2,"中期均線期數");
+
+
+variable: shortaverage(0);
+variable: midaverage(0);
+
+
+settotalbar(2);
+setbarback(maxlist(shortlength,midlength));
+
+shortaverage=Average(close,shortlength);
+midaverage=Average(close,midlength) ; 
+
+if open > maxlist(shortaverage, midaverage ) and
+   close < minlist(shortaverage, midaverage )
+then ret=1;        
