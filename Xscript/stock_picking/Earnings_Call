@@ -1,0 +1,24 @@
+Var: mm(0), rev(0);
+
+rev = GetField("月營收","M");
+mm = Month(GetFieldDate("月營收","M"));
+value2=GetField("月營收","M")[3]+GetField("月營收","M")[4]+GetField("月營收","M")[5];
+value3=GetField("月營收","M")[6]+GetField("月營收","M")[7]+GetField("月營收","M")[8];
+value4=GetField("月營收","M")[9]+GetField("月營收","M")[10]+GetField("月營收","M")[11];
+
+
+if mm=3 or mm=6 or mm=9 or mm=12
+then value1=GetField("月營收","M")+GetField("月營收","M")[1]+GetField("月營收","M")[2];
+
+if value1>value2 and value1>value3 and value1>value4 and value2>value4 and value2>value3
+and value3>value4
+then ret=1; 
+
+
+
+outputfield1(mm, "營收月份");
+outputfield2(value1, "預估單季營收(億)");
+outputfield3(value2, "季營收[1]");
+outputfield4(value3, "季營收[2]");
+outputfield5(value4, "季營收[3]");
+outputfield6(GetField("法說會日期"),"法說會日期");
