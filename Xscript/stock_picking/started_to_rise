@@ -1,0 +1,13 @@
+Input: day(30,"日期區間");
+Input: ratioLimit(7, "區間最大漲幅%");
+ 
+Condition1 = C=highest(C,day);
+//今日最高創區間最高價
+ 
+Condition2 = V=highest(v,day);
+//今日成交量創區間最大量
+ 
+Condition3 = highest(H,day) < lowest(L,day)*(1 + ratioLimit*0.01);
+//今日最高價距離區間最低價漲幅尚不大
+ 
+Ret = Condition1 And Condition2 And Condition3;
