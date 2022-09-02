@@ -1,0 +1,5 @@
+value1=GetField("營業外收入合計","Q");
+value2=GetField("稅前淨利","Q");
+value3=value1/value2*100;
+if value3<=20 then ret=1; 
+outputfield1(value3, "業外");
