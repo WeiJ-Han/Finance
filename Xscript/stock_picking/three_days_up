@@ -1,0 +1,11 @@
+condition1=c-o>0;
+condition2=c[1]-o[1]>0;
+condition3=c[2]-o[2]>0;
+if condition1
+and condition2
+and condition3
+then ret=1; 
+value1=GetField("外資買賣超","D")+GetField("投信買賣超","D");
+outputfield1(GetField("投信買賣超","D"),"投信買賣超");
+outputfield2(GetField("外資買賣超","D"),"外資買賣超");
+outputfield3(value1,"外資加投信買賣超");
