@@ -1,0 +1,14 @@
+if close > 0
+then ret =1;
+
+outputfield1(GetField("貝他值","D"),"BETA");
+outputfield2(GetField("負債對淨值比率","Y"),"D/B");
+outputfield3(GetField("股東權益報酬率","Y"),"ROE");
+outputfield4(GetField("股價淨值比","Y"),"P/B");
+outputfield5(GetField("營收成長率","Y"),"營收成長率");
+outputfield6(GetField("總市值(億)","Y"),"總市值(億)");
+outputfield7(GetField("週轉率","Y"),"週轉率");
+outputfield8(GetField("成交量","Y"),"成交量");
+outputfield9(GetField("收盤價","Y"),"收盤價");
+outputfield10(GetField("漲跌幅","M"),"月報酬率");
+outputfield11(GetField("漲跌幅","Y"),"年報酬率");
