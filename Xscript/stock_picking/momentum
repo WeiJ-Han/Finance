@@ -1,0 +1,3 @@
+input:startday(0101,"區間起始日");
+input:endday(0131,"區間結束日");
+value1=rangechange(close,startday,endday);
