@@ -1,0 +1,9 @@
+input:price(numeric);
+input:startday(numeric);
+input:endday(numeric);
+ 
+value1=getbaroffset(startday);
+value2=getbaroffset(endday);
+ 
+value3=(price[value2]/price[value1])-1 ;
+rangechange=value3*100;
