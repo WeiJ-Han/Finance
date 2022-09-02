@@ -1,0 +1,4 @@
+input:VOL_SHORT(5,"均量天期"),Vol_Length(20,"均量天期");
+value1 = average(volume,VOL_SHORT);
+value2 = average(volume,Vol_Length);
+if value1>value2 then ret=1;
