@@ -1,0 +1,5 @@
+Input: X(20, "天期");
+Value1 = Average(Close, X);
+Condition1 = Close > Value1;
+Condition2 = Close[1] < Value1[1];
+If Condition1 And Condition2 Then Ret = 1;
