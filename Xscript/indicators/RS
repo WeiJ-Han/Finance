@@ -1,0 +1,11 @@
+input:preiod(20,"RS移動平均線計算期別");
+value1=GetSymbolField("TSE.TW","收盤價","D");
+variable:rss(0);
+variable:rssav(0);
+ 
+if value1<>0 then rss=CLOSE/value1;
+rssav=average(rss,preiod);
+value2=rss- rssav;	
+//plot1(rss,"RS指標");
+//plot2(rssav,"移動平均");
+Plot3(value2);
