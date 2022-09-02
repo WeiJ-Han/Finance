@@ -1,0 +1,7 @@
+value1=GetField("最新股本");//單位: 億元
+value2=GetField("外資買賣超","D");//單位:張數
+input:period(numericsimple);
+value3=summation(value2,period);
+if value1<>0
+then value4=value3/(value1*10000)*100;
+ret=value4;
